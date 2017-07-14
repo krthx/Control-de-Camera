@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:fab="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="fill_parent"
+android:layout_height="fill_parent"
+android:fitsSystemWindows="true"
+tools:context=".MainActivity"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+    <!--<android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
+-->
+    <!--<Gallery
+        android:id="@+id/gallery"
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:spacing="8dp"
+        android:background="@android:color/darker_gray"
+        android:paddingTop="4dp"
+        />-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycler_gallery"
+        android:scrollbars="vertical"
+        android:layout_width="fill_parent"
+        android:background="@android:color/darker_gray"
+        android:layout_height="150dp"/>
+    <ImageView
+        android:id="@+id/selected"
+        android:layout_width="wrap_content"
+        android:background="@color/blanco"
+        android:layout_height="300dp"
+        android:layout_below="@+id/recycler_gallery"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:contentDescription="@string/selected" />
+
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        fab:fab_addButtonColorNormal="@color/purple"
+        fab:fab_addButtonColorPressed="@color/light_purple"
+        fab:fab_addButtonPlusIconColor="@color/blanco"
+        fab:fab_labelStyle="@style/menu_labels_style"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginEnd="16dp">
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_a"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_colorNormal="@color/teal"
+            fab:fab_icon="@drawable/ic_white_pic"
+            fab:fab_title="Gallery"
+            fab:fab_size="mini"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+        <com.getbase.floatingactionbutton.FloatingActionButton
+            android:id="@+id/action_b"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            fab:fab_icon="@drawable/ic_white_camera"
+            fab:fab_colorNormal="@color/teal"
+            fab:fab_title="Camera"
+            fab:fab_plusIconColor="@color/blanco"
+            fab:fab_size="mini"
+            fab:fab_colorPressed="@color/white_pressed"/>
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+</RelativeLayout>
